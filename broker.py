@@ -25,7 +25,7 @@ class Broker:
 class AdvancedBroker(Broker):
     def __init__(self, id):
         super().__init__(id)
-        self.processed_publications = set()  # Track processed publications to avoid cycles
+        self.processed_publications = set()
 
     def publish(self, publication):
         publication_id = publication.get('id')
